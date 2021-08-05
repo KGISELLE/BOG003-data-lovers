@@ -10,8 +10,12 @@ for (let i=0; i<allMovies.length;i++){
     //let titleofMovie=document.createElement("TITLE");
     //titleofMovie=allMovies[i].title;
     screenPoster.setAttribute("src", allMovies[i].poster);
-    document.body.appendChild(screenPoster);    
+    document.querySelector(".posters").appendChild(screenPoster);  
+      
 }
+
+
+
 
 
 //document.body.appendChild(screenPoster);
@@ -46,5 +50,7 @@ foreach(arrayData){
 
 } */
 
-//onsole.log(example, data);
+//console.log(example, data);
+
+
 
