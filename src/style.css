@@ -77,49 +77,57 @@ header h1{
     transition: 0.5s;
 }
 
-/*arreglo listas Gis*/
+/*nav class = "nav-sort-by">*/
 .nav-sort-by{
-    background-color:plum;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 5px;
-    padding-right: 7px;
-    display:flex;
-    flex-flow: column wrap;
-}
-
-.nav-sort-by a{
-    background-color: darkmagenta;
-    color: whitesmoke;
+    color: snow;
     text-decoration: none;
-    padding: 1px 5px;
-    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    width: 140px;
+    background-color:darkmagenta;
+    line-height: 25px;
     text-align:center;
     border-radius: 5px;
+    /*espacio entre nav menu y nav sort-by*/
     margin: 5px 10px;
-    width: 90%;
+    
 }
 
-.nav-sort-by a:hover{
-    background-color:black;
-    color:whitesmoke;
+.nav-sort-by:hover{
+    background-color:plum;
+    color: black;
     transition: 0.5s;
 }
 
-/* .nav-sort */
-.nav-sort{
-    display: none;
-    width: 80%;
-    margin-left: 15px;
-    list-style: none;
-}
-
-.nav-sort-by:hover > ul{
+/*<a href="#" class= "botton-sort">Ordenar por:*/
+.botton-sort{
+    text-decoration: none;
     display: block;
+    color: snow;
+}
+
+.nav-sort li a{
+    background-color: black;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 120px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.nav-sort li a:hover{
+    background-color:plum;
+    color: black;
     transition: 0.5s;
 }
 
-
+.nav-sort li{
+   /*Ocultar menu desplegable ordenar por*/
+    display: none;
+}
 
 main{
     width: 100%;
@@ -127,8 +135,8 @@ main{
     display: flex;
 }
 
-/*<section class="posters">*/
-.posters{
+/*<section class="main">*/
+.main{
     padding: 5px 10px;
     margin-bottom: 50px;
     /*Flex*/
@@ -138,7 +146,7 @@ main{
     flex-flow: row wrap;
 }
 
-.posters p{
+.main p{
     text-align: center;
     font-weight: bold;
 }
@@ -157,7 +165,6 @@ h3{
     text-align: center;
     background-color:darkmagenta;
     border-radius: 5px;
-    padding: 1px 5px;
 }
 
 aside p{
@@ -167,10 +174,6 @@ aside p{
 aside p a{
     text-decoration: none;
     color:lightpink;
-}
-
-aside p a:hover{
-    color:deeppink;
 }
 
 
@@ -202,15 +205,9 @@ h4 a{
     flex-flow: row wrap;
     align-items: center;
     align-content: space-around;
-    margin: 0px 20px;
+    margin: 0px 20px
 }
 
 #github{
     margin-left: 10px;
-}
-
-
-/*Prueba*/
-#prueba{
-    background-color: purple;
 }
