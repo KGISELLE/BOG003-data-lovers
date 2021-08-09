@@ -53,4 +53,11 @@ foreach(arrayData){
 //console.log(example, data);
 
 
+//-- Funcionalidad para girar la tarjeta --//
+const card = document.querySelector("#card");
+card.addEventListener("click", () => {
+    card.classList.toggle("active")
+});
+
+
 
