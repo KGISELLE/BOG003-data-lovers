@@ -217,34 +217,36 @@ h4 a{
 
 /*-- Estilo general de las tarjetas --*/
 .card-container{
+    /*ajustar despues al tamaño del poster*/
+    width: 200px;
+    height: 300px;
+    padding: 10px 10px;
+
     background-color: steelblue;
     border-radius: 5px;
     position: relative;
-    /* transform:rotateY(0deg);
-    transition: 0.5s;
     transform-style: preserve-3d;
-    backface-visibility: hidden;
     cursor: pointer;
-    margin: 10px; */
+    transition: 1s;
 }
 
 /*-- Clase .active para que se active al click con JS --*/
-.card-container{
-
-    
-
+.card-container.active{
+    transform:rotateY(180deg);
 }
+
 .front-card, .back-card{
+    background-color: tomato;
     position: absolute;
     backface-visibility: hidden;
+    width: 90%;
+    height: 90%;
 }
 
 .back-card{
     transform:rotateY(180deg);
-    transition: 0.5s;
+    transition: 0.8s;
     transform-style: preserve-3d;
 }
 
-.back-card.active{
-    transform:rotateY(180deg);
-}
+
