@@ -214,3 +214,37 @@ h4 a{
 #prueba{
     background-color: purple;
 }
+
+/*-- Estilo general de las tarjetas --*/
+.card-container{
+    background-color: steelblue;
+    border-radius: 5px;
+    position: relative;
+    /* transform:rotateY(0deg);
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+    margin: 10px; */
+}
+
+/*-- Clase .active para que se active al click con JS --*/
+.card-container{
+
+    
+
+}
+.front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back-card{
+    transform:rotateY(180deg);
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.back-card.active{
+    transform:rotateY(180deg);
+}
