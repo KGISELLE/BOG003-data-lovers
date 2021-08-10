@@ -218,8 +218,8 @@ h4 a{
 /*-- Estilo general de las tarjetas --*/
 .card-container{
     /*ajustar despues al tamaño del poster*/
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 500px;
     padding: 10px 10px;
 
     background-color: steelblue;
@@ -249,4 +249,6 @@ h4 a{
     transform-style: preserve-3d;
 }
 
+
+/*comentario prueba*/
 
