@@ -13,7 +13,7 @@ body{
     
     }
 
-.flex-container{
+.flexContainer{
     width: 100%;
     margin: auto;
     /*Flex*/
@@ -48,8 +48,8 @@ header h1{
 }
 
 
-/*<nav class = "nav-menu">*/
-.nav-menu{
+/*<nav class = "navMenu">*/
+.navMenu{
     width: 100%;
     /*Flex*/
     display:flex;
@@ -57,8 +57,8 @@ header h1{
     align-items: center;
 }
 
-/*<a href="#" class = "nav-link">*/
-.nav-link{
+/*<a href="#" class = "navLink">*/
+.navLink{
     background-color:darkmagenta;
     color: snow;
     text-decoration: none;
@@ -70,7 +70,7 @@ header h1{
     flex-grow: 1;
 }
 
-.nav-link:hover{
+.navLink:hover{
     background-color:plum;
     color: black;
     text-transform:uppercase;
@@ -78,7 +78,7 @@ header h1{
 }
 
 /*arreglo listas Gis*/
-.nav-sort-by{
+.navSortBy{
     background-color:plum;
     border-radius: 5px;
     margin-left: 10px;
@@ -88,7 +88,7 @@ header h1{
     flex-flow: column wrap;
 }
 
-.nav-sort-by a{
+.navSortBy a{
     background-color: darkmagenta;
     color: whitesmoke;
     text-decoration: none;
@@ -100,21 +100,21 @@ header h1{
     width: 90%;
 }
 
-.nav-sort-by a:hover{
+.navSortBy a:hover{
     background-color:black;
     color:whitesmoke;
     transition: 0.5s;
 }
 
-/* .nav-sort */
-.nav-sort{
+/* .navSort */
+.navSort{
     display: none;
     width: 80%;
     margin-left: 15px;
     list-style: none;
 }
 
-.nav-sort-by:hover > ul{
+.navSortBy:hover > ul{
     display: block;
     transition: 0.5s;
 }
@@ -138,7 +138,7 @@ main{
     flex-flow: row wrap;
 }
 
-.posters p{
+.posters h5{
     text-align: center;
     font-weight: bold;
 }
@@ -197,7 +197,7 @@ h4 a{
     text-decoration: none;
 }
 
-.redes-sociales{
+.redesSociales{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -216,10 +216,10 @@ h4 a{
 }
 
 /*-- Estilo general de las tarjetas --*/
-.card-container{
+.cardContainer{
     /*ajustar despues al tamaño del poster*/
     width: 250px;
-    height: 500px;
+    height: 350px; 
     padding: 10px 10px;
 
     background-color: steelblue;
@@ -231,11 +231,11 @@ h4 a{
 }
 
 /*-- Clase .active para que se active al click con JS --*/
-.card-container.active{
+.cardContainer.active{
     transform:rotateY(180deg);
 }
 
-.front-card, .back-card{
+.frontCard, .backCard{
     background-color: tomato;
     position: absolute;
     backface-visibility: hidden;
@@ -243,7 +243,7 @@ h4 a{
     height: 90%;
 }
 
-.back-card{
+.backCard{
     transform:rotateY(180deg);
     transition: 0.8s;
     transform-style: preserve-3d;

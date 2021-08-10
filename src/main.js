@@ -18,24 +18,24 @@ for (let i = 0; i < allMovies.length; i++) {
 
 
 
-    //-- Creando el divContainer padre "card-container" --//
+    //-- Creando el divContainer padre "cardContainer" --//
     let divContainer = document.createElement("div");
-    divContainer.setAttribute("class", "card-container");
+    divContainer.setAttribute("class", "cardContainer");
 
-    //-- Creando divPoster "front-card" div hijo de divContainer "card-container" --//
+    //-- Creando divPoster "frontCard" div hijo de divContainer "cardContainer" --//
     let divPoster = document.createElement("div");
-    divPoster.setAttribute("class", "front-card");
-    //-- mostrar Poster dentro de divPoster "front-card" --//
+    divPoster.setAttribute("class", "frontCard");
+    //-- mostrar Poster dentro de divPoster "frontCard" --//
     divPoster.appendChild(screenPoster);
 
-    //-- mostrar titulo de pelicula dentro de "front-card"
+    //-- mostrar titulo de pelicula dentro de "frontCard"
     divPoster.appendChild(titlePoster);
 
 
 
-    //-- Creando divBack "back-card" div hijo de divContainer "card-container" --//
+    //-- Creando divBack "backCard" div hijo de divContainer "cardContainer" --//
     let divBack = document.createElement("div");
-    divBack.setAttribute("class", "back-card");
+    divBack.setAttribute("class", "backCard");
     divBack.innerHTML = ""
 
     //-- vinculando div padre "divConatiner" con sus div hijos "divPoster" y "divBack" --//
