@@ -22,28 +22,29 @@ body{
 }
 
 header{
-    background-color: black;
+    background-color:rgb(31, 46, 73);
+    opacity: 85%;
     width: 100%;
     /*height: 100px;*/
     /*Flex*/
     display: flex;
     flex-flow: row wrap;
     justify-content:center;
-    align-items: center;
+    align-items:center;
 }
 
 header .logo{
-    padding: 10px;
+    padding-left: 25px;
+    padding-top: 5px;
     flex: 1 1 10%;
 }
 
 header h1{
-    color: whitesmoke;
+    color:whitesmoke;
     font-weight: bold;
     font-size: 35px;
-    padding: 5px;
-    text-align: center;
-    padding: 5px;
+    padding-right: 15%;
+    text-align:center;
     flex: 1 1 70%;
 }
 
@@ -60,6 +61,7 @@ header h1{
 /*<a href="#" class = "navLink">*/
 .navLink{
     background-color:darkmagenta;
+    opacity: 80%;
     color: snow;
     text-decoration: none;
     font-weight: bold;
@@ -72,7 +74,7 @@ header h1{
 
 .navLink:hover{
     background-color:plum;
-    color: black;
+    color: rgb(31, 46, 73);
     text-transform:uppercase;
     transition: 0.5s;
 }
@@ -94,14 +96,14 @@ header h1{
     text-decoration: none;
     padding: 1px 5px;
     display: block;
-    text-align:center;
+    text-align: center;
     border-radius: 5px;
     margin: 5px 10px;
     width: 90%;
 }
 
 .navSortBy a:hover{
-    background-color:black;
+    background-color:rgb(31, 46, 73);
     color:whitesmoke;
     transition: 0.5s;
 }
@@ -129,8 +131,7 @@ main{
 
 /*<section class="posters">*/
 .posters{
-    padding: 5px 10px;
-    margin-bottom: 50px;
+    padding-top: 5px;
     /*Flex*/
     display: flex;
     flex: 1 1 80%;
@@ -141,10 +142,12 @@ main{
 .posters h5{
     text-align: center;
     font-weight: bold;
+
 }
 
 aside{
     background-color: rgb(31, 46, 73);
+    opacity: 85%;
     color: whitesmoke;
     border-radius: 5px;
     padding: 15px;
@@ -166,7 +169,7 @@ aside p{
 
 aside p a{
     text-decoration: none;
-    color:lightpink;
+    color:palevioletred;
 }
 
 aside p a:hover{
@@ -177,6 +180,7 @@ aside p a:hover{
 
 footer{
     background-color:darkmagenta;
+    opacity: 70%;
     width: 100%;
     padding: 5px;
     /*Flex*/
@@ -210,24 +214,23 @@ h4 a{
 }
 
 
-/*Prueba*/
-#prueba{
-    background-color: purple;
-}
 
 /*-- Estilo general de las tarjetas --*/
 .cardContainer{
     /*ajustar despues al tamaño del poster*/
     width: 250px;
-    height: 350px; 
-    padding: 10px 10px;
-
-    background-color: steelblue;
+    height: 380px; 
+    padding: 10px;
+    padding-left: 12px; 
+    margin-bottom: 10px;
+    background-color:lightslategray;
     border-radius: 5px;
     position: relative;
     transform-style: preserve-3d;
     cursor: pointer;
     transition: 1s;
+    align-items: center;
+    
 }
 
 /*-- Clase .active para que se active al click con JS --*/
@@ -236,11 +239,16 @@ h4 a{
 }
 
 .frontCard, .backCard{
-    background-color: tomato;
+    background-color:lightpink;
     position: absolute;
     backface-visibility: hidden;
     width: 90%;
-    height: 90%;
+    height: 94%;
+    /*padding-left: 12px;*/
+    border-radius: 5px;
+    /*flex*/
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .backCard{
@@ -249,6 +257,16 @@ h4 a{
     transform-style: preserve-3d;
 }
 
+/*estilos año de lanzamiento pelicula*/
+.frontCard p{
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
 
-/*comentario prueba*/
+/*estilos de la imagen del poster*/
+IMG{
+    border-radius: 5px;
+    /*margin-top: 5px;*/
+}
 

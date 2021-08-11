@@ -10,11 +10,21 @@ for (let i = 0; i < allMovies.length; i++) {
     const screenPoster = document.createElement("IMG");
     screenPoster.setAttribute("src", allMovies[i].poster);
 
-    //-- Creando elemento "TITLE" para extraer el titulo de la data --//
+    //-- Creando elemento "h5" para extraer el titulo de la data --//
     const titlePoster = document.createElement("h5");
     titlePoster.innerHTML = allMovies[i].title;
     // titlePoster.createTextNode("src", allMovies[i].title);//
     /* titlePoster.textContent = e.title; */
+
+    //-- Creando elemento "p" para extraer "release_date" de la data --//
+    const releaseDate = document.createElement("p");
+    releaseDate.innerHTML = allMovies[i].release_date;
+
+    //-- Creando elemento "p" para extraer "rt_score" de la data --//
+    const ranking = document.createElement("p");
+    ranking.innerHTML = allMovies[i].rt_score;
+
+
 
 
 
@@ -31,16 +41,31 @@ for (let i = 0; i < allMovies.length; i++) {
     //-- mostrar titulo de pelicula dentro de "frontCard"
     divPoster.appendChild(titlePoster);
 
+    //-- mostrar año de la pelicula dentro de "frontCard"
+    divPoster.appendChild(releaseDate);
+
+    //-- mostrar ranking de la pelicula dentro de "frontCard"
+    divPoster.appendChild(ranking);
+
 
 
     //-- Creando divBack "backCard" div hijo de divContainer "cardContainer" --//
     let divBack = document.createElement("div");
     divBack.setAttribute("class", "backCard");
-    divBack.innerHTML = ""
+
+    //-- mostrar titulo de pelicula dentro de "backCard"
+    
+    //-- mostrar descripción de pelicula dentro de "backCard"
+
+    //-- mostrar director de pelicula dentro de "backCard"
+
+    //-- mostrar productor de pelicula dentro de "backCard"
+    
 
     //-- vinculando div padre "divConatiner" con sus div hijos "divPoster" y "divBack" --//
-    divContainer.appendChild(divPoster, divBack);
-
+    divContainer.appendChild(divPoster);
+    divContainer.appendChild(divBack);
+    
 
     //let titleofMovie=document.createElement("TITLE");
     //titleofMovie=allMovies[i].title;
@@ -53,8 +78,6 @@ for (let i = 0; i < allMovies.length; i++) {
     });
 
 }
-
-
 
 
 
