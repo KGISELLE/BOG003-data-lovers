@@ -74,7 +74,7 @@ header h1{
 
 .navLink:hover{
     background-color:plum;
-    color: rgb(31, 46, 73);
+    color: black;
     text-transform:uppercase;
     transition: 0.5s;
 }
@@ -131,7 +131,7 @@ main{
 
 /*<section class="posters">*/
 .posters{
-    padding-top: 5px;
+    padding-top: 4.5px;
     /*Flex*/
     display: flex;
     flex: 1 1 80%;
@@ -255,6 +255,7 @@ h4 a{
     transform:rotateY(180deg);
     transition: 0.8s;
     transform-style: preserve-3d;
+    
 }
 
 /*estilos año de lanzamiento pelicula*/
@@ -270,3 +271,84 @@ IMG{
     /*margin-top: 5px;*/
 }
 
+.backCard h5{
+    margin-top: 10px;
+}
+
+/*estilos contenedor descripcion de la pelicula*/
+.resume{
+    text-align: justify;
+    font-size: 11px;
+    padding: 8px;
+    margin: 5px;
+    color:black;
+    border-radius: 5px;
+    border-style:double;
+    border-color: darkmagenta;
+    height: 60%;
+    overflow:auto;
+}
+
+/*estilos h6 traidos de data de la pelicula*/
+h6{
+    text-align: justify;
+    font-size: 12px;
+    color:black;
+}
+
+/*estilos h7 titulos de la data*/
+h7{
+    text-align: justify;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: darkmagenta;
+}
+
+/*estilos contenedor director de la pelicula*/
+.director{
+    text-align: justify;
+    font-size: 15px;
+    padding: 3px;
+    margin: 5px;
+    color:black;
+    border-radius: 5px;
+    border-style:dotted;
+    border-color: darkmagenta;
+    /*flex*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/*estilos contenedor productor de la pelicula*/
+.productor{
+    text-align: justify;
+    font-size: 15px;
+    padding: 3px;
+    margin: 5px;
+    color:black;
+    border-radius: 5px;
+    border-style:dotted;
+    border-color: darkmagenta;
+    /*flex*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/*estilos contenedor personajes de la pelicula*/
+.characters{
+    text-align: justify;
+    font-size: 15px;
+    padding: 3px;
+    margin: 5px;
+    color:black;
+    border-radius: 5px;
+    border-style:dotted;
+    border-color: darkmagenta;
+    /*flex*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
