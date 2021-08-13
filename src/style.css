@@ -59,7 +59,7 @@ header h1{
 }
 
 /*<a href="#" class = "navLink">*/
-.navLink{
+.navLink, .navLink1{
     background-color:darkmagenta;
     opacity: 80%;
     color: snow;
@@ -72,7 +72,7 @@ header h1{
     flex-grow: 1;
 }
 
-.navLink:hover{
+.navLink:hover, .navLink1:hover{
     background-color:plum;
     color: black;
     text-transform:uppercase;

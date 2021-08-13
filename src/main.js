@@ -9,8 +9,9 @@ let allMovies = data.films;
 //console.log(allMovies[0].poster);
 
 
-//-- Funcion para crear y mostar insfo dentro de divs o contenedores "tarjetas" --//
-function showCards (data){
+
+//-- Funcion para crear y mostrar info dentro de divs o contenedores "tarjetas" --//
+function showCards (){
     for (let i = 0; i < allMovies.length; i++) {
         //-- Creando elementos extraidos de la data para poner en "front card" --//
         //-- Creando elemento "IMG" para extraer el Poster de la data --//
@@ -180,6 +181,20 @@ document.querySelector(".submenu3").addEventListener("click", () => {
     console.log(score(allMovies));
 });
 
+//-- Evento al click en el boton "Personajes" navMenu
+document.querySelector(".navLink1").addEventListener("click", () => {
+    document.querySelector(".navSortBy").innerHTML ="";
+    document.querySelector("main").innerHTML ="";
+    showCharacters(allMovies);
+    console.log(allMovies);
+});
+
+
+/* //-- Evento al click en el boton "Personajes" navMenu
+document.querySelector(".navLink").addEventListener("click", () => {
+    showCards(allMovies);
+    console.log(allMovies);
+}); */
 
 
 
