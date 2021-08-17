@@ -21,6 +21,11 @@ export const releaseDate =  (dataMovie) => {
 
 //-- Función para organizar la data por puntaje de "rotten tomatoes" --//
 export const score =  (dataMovie) => {
-  return dataMovie.sort((a, b) =>(b.rt_score - a.rt_score ));
+  return dataMovie.sort((a, b) =>(b.rt_score - a.rt_score));
 }
 
+//-- Función para filtar la data por "Pelicula" --//
+export const movieFilter =  (dataMovie, title) => {
+  return dataMovie.filter((dataMovie) => dataMovie.title);
+
+}
