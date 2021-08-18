@@ -223,7 +223,7 @@ h4 a{
     padding: 10px;
     padding-left: 12px; 
     margin-bottom: 10px;
-    background-color:lightslategray;
+    background: linear-gradient(45deg, darkmagenta, lightblue);
     border-radius: 5px;
     position: relative;
     transform-style: preserve-3d;

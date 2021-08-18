@@ -247,8 +247,7 @@ function showCharacters(){
 
             
             //-- A la info traida de ghibli.js se les asigna un contenedor padre "divResume" --//
-            divResume.appendChild(gender);
-            divResume.appendChild(age);
+            
             divResume.appendChild(specie);
             divResume.appendChild(eyeColor);
             divResume.appendChild(hairColor);
