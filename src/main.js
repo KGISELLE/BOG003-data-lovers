@@ -187,147 +187,12 @@ document.querySelector(".submenu3").addEventListener("click", () => {
 
 
 //-- Funcion para crear y mostrar info dentro de divs o contenedores "tarjetas personajes" --//
-function showCharacters() {
-    for (let i = 0; i < allMovies.length; i++) {
+function showCharacters(allMovies) {
 
-        let allCharacters = allMovies[i].people;
-        /*  let allCharacters = allMovies; */
-
-        for (let x = 0; x < allCharacters.length; x++) {
-            //-- traer datos de archivo ghibli.js y crear el elemento contenedor parte Frontal --//
-            const photo = document.createElement("img");
-            photo.setAttribute("src", allCharacters[x].img);
-
-            const nameCharacters = document.createElement("h5");
-            nameCharacters.innerHTML = allCharacters[x].name;
-
-            const gender = document.createElement("p");
-            gender.innerHTML = allCharacters[x].gender;
-
-            const age = document.createElement("p");
-            age.innerHTML = allCharacters[x].age;
-
-            const specie = document.createElement("p");
-            specie.innerHTML = allCharacters[x].specie;
-
-            const eyeColor = document.createElement("p");
-            eyeColor.innerHTML = allCharacters[x].eye_color;
-
-            const hairColor = document.createElement("p");
-            hairColor.innerHTML = allCharacters[x].hair_color;
-
-            //-- traer datos de archivo ghibli.js y crear el elemento contenedor reverso --//
-            const name = document.createElement("h5");
-            name.innerHTML = allCharacters[x].name;
-
-            //-- crear contenedores de la info y asignarle una clase para reutilizar las creadas --//
-            let divContainer = document.createElement("div");
-            divContainer.setAttribute("class", "cardContainer")
-
-            //-- Crear contenedor parte frontal de la tarjeta --/
-            let divFront = document.createElement("div");
-            divFront.setAttribute("class", "frontCard");
-
-            //-- Asignar info que va en el contenedor padre "divFront" parte frontal tarjeta --//
-            divFront.appendChild(photo);
-            divFront.appendChild(nameCharacters);
-            divFront.appendChild(gender);
-            divFront.appendChild(age);
-
-            //-- Crear contenedor reverso de la tarjeta --/
-            let divBack = document.createElement("div");
-            divBack.setAttribute("class", "backCard");
-
-            //-- Creando otros divs hijos de divBack "BackCard" --//
-            let divResume = document.createElement("div");
-            divResume.setAttribute("class", "resume1");
-
-            //-- Asignar info que va en el contenedor padre "divBack" reverso tarjeta --//
-            divBack.appendChild(name);
-
-            //-- vinculando div padre "divBack" con div hijos "divResume", "divDirector" y "divProductor" (reutilizando clases de CSS)--//
-            divBack.appendChild(divResume);
-
-
-            //-- A la info traida de ghibli.js se les asigna un contenedor padre "divResume" --//
-
-            divResume.appendChild(specie);
-            divResume.appendChild(eyeColor);
-            divResume.appendChild(hairColor);
-
-            //-- Asinarle contenedor padre a parte frontal y reverso de la tarjeta --//
-            divContainer.appendChild(divFront);
-            divContainer.appendChild(divBack);
-
-            //-- Mostrar dentro de la seccion class = "posters" el div hijo "divContaner"
-            document.querySelector(".posters").appendChild(divContainer)
-
-
-            //-- Funcionalidad para girar la tarjeta --//
-            divContainer.addEventListener("click", () => {
-                divContainer.classList.toggle("active")
-            });
-        }
-
-    }
-}
-
-/* console.log(showCharacters); */
-
-
-//-- Evento al click en el link "Personajes" del navMenu --//
-document.querySelector(".navLink1").addEventListener("click", () => {
-    document.querySelector(".navSortBy").style.display = "none";
-    document.querySelector("aside").style.display = "none";
-    document.querySelector(".posters").innerHTML = "";
-    document.querySelector(".containerFilmFilter").style.display = "inline-flex";
-    //-- Mostrar tarjetas de personajes en pantalla --//
-    showCharacters();
-    
-    
-    //Mostrar Estadisticas de cantidad de personajes femeninos, masculinos y otros//
-    document.querySelector(".stadistics").innerHTML = "There are "+(genderCharacters.total) + " characters in Studio Ghibli's movies. Around "  + Math.round(objectValue.fem) + "% of them are female characters."
-
-    /* "There are "+(objectValue.total) + " characters in Studio Ghibli's movies. Around "  + Math.round(objectValue.fem) + "% of them are female characters." */
-    
-});
-
-//-- Evento al click en el link "Peliculas" del navMenu --//
-document.querySelector(".navLink").addEventListener("click", () => {
-    document.querySelector(".navSortBy").style.display = "block";
-    document.querySelector("aside").style.display = "block";
-    document.querySelector(".containerFilmFilter").style.display = "none";
-    document.querySelector(".posters").innerHTML = "";
-    showCards();
-
-});
-
-
-//-- Evento al click en el boton filtar por Pelicula "Desplejar menu peliculas"
-function buttons() {
-    for (let i = 0; i < allMovies.length; i++) {
-
-        //-- Creando elemento "p" para extraer el titulo de la pelicula de la data --//
-        const link = document.createElement("p");
-        link.innerHTML = allMovies[i].title;
-
-        let linkBotton = document.createElement("button");
-        linkBotton.setAttribute("class", "buttonFilm");
-
-        document.querySelector(".containerFilmFilter").appendChild(linkBotton);
-
-        // mostrar titulo de pelicula dentro de "linkBotton"
-        linkBotton.appendChild(link);
-    }
-}
-
-
-//--Evento seleccion de personajes--//
-
-//-- Funcion para crear y mostrar info dentro de divs o contenedores "tarjetas personajes" --//
-function filterCharacters(allMovies) {
+    //for (let i = 0; i < allMovies.length; i++) {
 
     let allCharacters = allMovies;
+
 
     for (let x = 0; x < allCharacters.length; x++) {
         //-- traer datos de archivo ghibli.js y crear el elemento contenedor parte Frontal --//
@@ -404,9 +269,65 @@ function filterCharacters(allMovies) {
             divContainer.classList.toggle("active")
         });
     }
+
+    //}
+}
+
+/* console.log(showCharacters); */
+
+
+//-- Evento al click en el link "Personajes" del navMenu --//
+document.querySelector(".navLink1").addEventListener("click", () => {
+    document.querySelector(".navSortBy").style.display = "none";
+    document.querySelector("aside").style.display = "none";
+    document.querySelector(".posters").innerHTML = "";
+    document.querySelector(".containerFilmFilter").style.display = "inline-flex";
+    //-- Mostrar tarjetas de personajes en pantalla --//
+    for (let i = 0; 0 < allMovies.length; i++) {
+        let allCharacters = allMovies[i].people;
+        showCharacters(allCharacters);
+    }
+
+
+    //Mostrar Estadisticas de cantidad de personajes femeninos, masculinos y otros//
+    document.querySelector(".stadistics").innerHTML = "There are " + (genderCharacters.total) + " characters in Studio Ghibli's movies. Around " + Math.round(objectValue.fem) + "% of them are female characters."
+
+    /* "There are "+(objectValue.total) + " characters in Studio Ghibli's movies. Around "  + Math.round(objectValue.fem) + "% of them are female characters." */
+    
+
+});
+
+//-- Evento al click en el link "Peliculas" del navMenu --//
+document.querySelector(".navLink").addEventListener("click", () => {
+    document.querySelector(".navSortBy").style.display = "block";
+    document.querySelector("aside").style.display = "block";
+    document.querySelector(".containerFilmFilter").style.display = "none";
+    document.querySelector(".posters").innerHTML = "";
+    showCards();
+
+});
+
+
+//-- Evento al click en el boton filtar por Pelicula "Desplejar menu peliculas"
+function buttons() {
+    for (let i = 0; i < allMovies.length; i++) {
+
+        //-- Creando elemento "p" para extraer el titulo de la pelicula de la data --//
+        const link = document.createElement("p");
+        link.innerHTML = allMovies[i].title;
+
+        let linkBotton = document.createElement("button");
+        linkBotton.setAttribute("class", "buttonFilm");
+
+        document.querySelector(".containerFilmFilter").appendChild(linkBotton);
+
+        // mostrar titulo de pelicula dentro de "linkBotton"
+        linkBotton.appendChild(link);
+    }
 }
 
 
+//--Evento seleccion de personajes--//
 //-- Evento al click en el boton filtrar por Pelicula
 document.querySelector(".buttonFilter").addEventListener("click", () => {
     buttons(allMovies);
@@ -418,9 +339,12 @@ document.querySelector(".buttonFilter").addEventListener("click", () => {
 
             let titleFilter = e.target.textContent;
             let showFilter = movieFilter(allMovies, titleFilter);
-            filterCharacters(showFilter);
+            showCharacters(showFilter);
         });
     }
 },
-{ once :true});
+    { once: true });
+
+
+
 
