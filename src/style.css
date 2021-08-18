@@ -30,7 +30,7 @@ header{
     display: flex;
     flex-flow: row wrap;
     justify-content:center;
-    align-items:center;   
+    align-items:center;
 }
 
 header .logo{
@@ -127,7 +127,6 @@ main{
     width: 100%;
     /*Flex*/
     display: flex;
-    
 }
 
 /*<section class="posters">*/
@@ -448,4 +447,10 @@ h7{
     flex-flow: row wrap;
     justify-content: space-evenly;
 
+}
+
+.stadistics{
+    color:whitesmoke;
+    padding: 10px;
+    text-align: center;
 }
