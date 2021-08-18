@@ -187,10 +187,12 @@ document.querySelector(".submenu3").addEventListener("click", () => {
 
 
 //-- Funcion para crear y mostrar info dentro de divs o contenedores "tarjetas personajes" --//
-function showCharacters(){
-    for (let i = 0; i < allMovies.length; i++) {
+function showCharacters(allMovies){
+    
+    //for (let i = 0; i < allMovies.length; i++) {
+        
+        let allCharacters = allMovies;
 
-        let allCharacters = allMovies[i].people;
 
         for (let x = 0; x < allCharacters.length; x++) {
             //-- traer datos de archivo ghibli.js y crear el elemento contenedor parte Frontal --//
@@ -268,7 +270,7 @@ function showCharacters(){
             });
         }
 
-    }
+    //}
 }
 
 /* console.log(showCharacters(allMovies)) */
@@ -281,7 +283,12 @@ document.querySelector(".navLink1").addEventListener("click", () => {
     document.querySelector(".posters").innerHTML ="";
     document.querySelector(".containerFilmFilter").style.display = "inline-flex"; 
     //-- Mostrar tarjetas de personajes en pantalla --//
-    showCharacters();
+    for (let i = 0; 0< allMovies.length; i++) {  
+        let allCharacters= allMovies[i].people;
+        showCharacters(allCharacters);
+   
+    }
+    
 });
 
 //-- Evento al click en el link "Peliculas" del navMenu --//
@@ -333,42 +340,8 @@ document.querySelector(".buttonFilter").addEventListener("click", () => {
 
             let titleFilter = e.target.textContent;  
             let showFilter = movieFilter(allMovies, titleFilter);
-            console.log(showCharacters);  
-        });
-    }
-    
-    /* console.log(buttonMovies); */
-    /* .addEventListener("click", (e) => {
-
-        let titleFilter = e.target.textContent;
-
-
-        document.querySelector(".posters").innerHTML = "";
-        showCharacters(movieFilter(allMovies, titleFilter));
-        let divContainer = document.createElement("div");
-        divContainer.setAttribute("class", "cardContainer")
-        document.querySelector(".posters").appendChild(divContainer);
-        //poster.appendChild(showCharacters(movieFilter(titleFilter)));//
-    //posters.appendChild(titleFilter);//
-    //console.log(showCharacters(movieFilter(titleFilter)));//
-
-    
-    /* console.log(movieFilter); */
-
-    /* showCharacters(movieFilter(allMovies, titleFilter */
-
-        
-    
-
-
-
-    /* for (let i = 0; allMovies.length; i++) {
-        let nameOfMovie = allMovies[i].title;
-        if (nameOfMovie == movieFilter(titleFilter)) {
-
-        } */
-
-
-
-//}); */
-});
+            console.log(showCharacters(showFilter));  
+        });     
+    }   
+},
+{ once :true});
