@@ -30,7 +30,7 @@ header{
     display: flex;
     flex-flow: row wrap;
     justify-content:center;
-    align-items:center;
+    align-items:center;   
 }
 
 header .logo{
@@ -127,6 +127,7 @@ main{
     width: 100%;
     /*Flex*/
     display: flex;
+    
 }
 
 /*<section class="posters">*/

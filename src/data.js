@@ -1,9 +1,5 @@
-// estas funciones son de ejemplo
+// funcion realizar el filtro de la A-Z
 
-export const example = () => {
-  
-  return 'example';
-};
 
 export const anotherExample = () => {
   return 'OMG';
@@ -25,7 +21,8 @@ export const score =  (dataMovie) => {
 }
 
 //-- Función para filtar la data por "Pelicula" --//
-export const movieFilter =  (dataMovie, title) => {
-  return dataMovie.filter((dataMovie) => dataMovie.title);
+export const movieFilter =  (dataMovie,titleFilter) => {  
+  return dataMovie.filter(x => x.title==titleFilter)
+  //return dataMovie.filter((dataMovie) => (dataMovie.title));//
 
 }
