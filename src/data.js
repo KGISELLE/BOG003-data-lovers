@@ -22,6 +22,7 @@ export const score =  (dataMovie) => {
 
 //-- Función para filtar la data por "Pelicula" --//
 export const movieFilter =  (dataMovie, title) => {
-  return dataMovie.filter((movie) => movie.title == title);
 
+  let pelicula = dataMovie.filter(movie => movie.title == title);
+  return pelicula[0].people;
 }

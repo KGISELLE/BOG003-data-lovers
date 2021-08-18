@@ -320,14 +320,26 @@ function buttons(){
 document.querySelector(".buttonFilter").addEventListener("click", () => {
 
    buttons(allMovies);
-    
-    
-    /* document.querySelector(".posters").appendChild(divContainer)
-    console.log(showCards(showCharacters(allMovies)));
- */
-
+   
     //-- Evento al click en el boton filtrar por Pelicula en el boton de la pelicula
-    document.querySelector(".containerFilmFilter").addEventListener("click", (e) => {
+    const buttonMovies = document.querySelectorAll(".buttonFilm");
+    for (let i = 0; i < buttonMovies.length; i++) {
+        buttonMovies[i].addEventListener("click", (e) => {
+            /* console.log(e.target.textContent) */
+        
+            document.querySelector(".posters").innerHTML ="";
+
+            /* console.log(movieFilter(allMovies, e.target.textContent)); */
+
+            let titleFilter = e.target.textContent;  
+            let showFilter = movieFilter(allMovies, titleFilter);
+            console.log(showCharacters);  
+        });
+    }
+    
+    /* console.log(buttonMovies); */
+    /* .addEventListener("click", (e) => {
+
         let titleFilter = e.target.textContent;
 
 
@@ -358,5 +370,5 @@ document.querySelector(".buttonFilter").addEventListener("click", () => {
 
 
 
-});
+//}); */
 });
