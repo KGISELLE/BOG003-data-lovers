@@ -1,9 +1,5 @@
-// estas funciones son de ejemplo
+// funcion realizar el filtro de la A-Z
 
-export const example = () => {
-  
-  return 'example';
-};
 
 export const anotherExample = () => {
   return 'OMG';

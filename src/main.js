@@ -14,99 +14,100 @@ let allMovies = data.films;
 
 //-- Funcion para crear y mostrar info dentro de divs o contenedores "tarjetas" --//
 function showCards (){
+
     for (let i = 0; i < allMovies.length; i++) {
         //-- Creando elementos extraidos de la data para poner en "front card" --//
         //-- Creando elemento "IMG" para extraer el Poster de la data --//
         const screenPoster = document.createElement("IMG");
         screenPoster.setAttribute("src", allMovies[i].poster);
-    
+
         //-- Creando elemento "h5" para extraer el titulo de la data --//
         const titlePoster = document.createElement("h5");
         titlePoster.innerHTML = allMovies[i].title;
         // titlePoster.createTextNode("src", allMovies[i].title);//
         /* titlePoster.textContent = e.title; */
-    
+
         //-- Creando elemento "p" para extraer "release_date" de la data --//
         const releaseDate = document.createElement("p");
         releaseDate.innerHTML = allMovies[i].release_date;
-    
+
         //-- Creando elemento "p" para extraer "rt_score" de la data --//
         const score = document.createElement("p");
         score.innerHTML = allMovies[i].rt_score;
-    
+
         //-- Creando elementos extraidos de la data para poner en "back card" --//
         //-- Creando elemento "h5" para extraer el titulo de la data para "back card" --//
         const titleMovie = document.createElement("h5");
         titleMovie.innerHTML = allMovies[i].title;
-    
+
         //-- Creando elemento "p" para extraer "description" de la data --//
         const descriptionMovie = document.createElement("p");
         descriptionMovie.innerHTML = allMovies[i].description;
-    
+
         //-- Creando elemento "p" para extraer "director" de la data --//
         const directorMovie = document.createElement("h6");
         directorMovie.innerHTML = allMovies[i].director;
-    
+
         //-- Creando elemento "p" para extraer "producer" de la data --//
         const producerMovie = document.createElement("h6");
         producerMovie.innerHTML = allMovies[i].producer;
-    
-    
-    
-    
+
+
+
+
         //-- Creando divs --//
         // Creando el divContainer padre "cardContainer"
         let divContainer = document.createElement("div");
         divContainer.setAttribute("class", "cardContainer");
-    
+
         // Creando divPoster "frontCard" div hijo de divContainer "cardContainer"
         let divPoster = document.createElement("div");
         divPoster.setAttribute("class", "frontCard");
-    
+
         //-- Mostrar data estraida dentro de los divs creados divPoster "frontCard" --//
         // mostrar Poster dentro de divPoster "frontCard"
         divPoster.appendChild(screenPoster);
-    
+
         // mostrar titulo de pelicula dentro de "frontCard"
         divPoster.appendChild(titlePoster);
-    
+
         // mostrar año de la pelicula dentro de "frontCard"
         divPoster.appendChild(releaseDate);
-    
+
         // mostrar calificación de la pelicula dentro de "frontCard"
         divPoster.appendChild(score);
-    
-    
+
+
         //-- Creando divBack "backCard" div hijo de divContainer "cardContainer" --//
         let divBack = document.createElement("div");
         divBack.setAttribute("class", "backCard");
-    
+
         //-- Mostrar data estraida dentro de los divs creados divBack "BackCard" --//
         // mostrar titulo de pelicula dentro de "backCard"
         divBack.appendChild(titleMovie);
-        
+
         //-- Creando divResume "resume" div hijo de divBack "BackCard" --//
         let divResume = document.createElement("div");
         divResume.setAttribute("class", "resume");
-    
+
         //-- Creando divDirector "director" div hijo de divBack "BackCard" --//
         let divDirector = document.createElement("div");
         divDirector.setAttribute("class", "director");
-    
+
         //-- Creando divProductor "productor" div hijo de divBack "BackCard" --//
         let divProducer = document.createElement("div");
         divProducer.setAttribute("class", "productor");
-    
+
         //-- Creando divCharacters "personajes" div hijo de divBack "BackCard" --//
         let divCharacters = document.createElement("div");
         divCharacters.setAttribute("class", "characters");
-    
+
         //-- vinculando div padre "divBack" con div hijos "divResume", "divDirector" y "divProductor" --//
         divBack.appendChild(divResume);
         divBack.appendChild(divDirector);
         divBack.appendChild(divProducer);
         divBack.appendChild(divCharacters);
-    
+
         //-- mostrar descripción de pelicula dentro de "divResume" hijo de "divBack" --//
         //-- Colocarle un titulo al abstract
         const abstract = document.createElement("h7");
@@ -114,8 +115,8 @@ function showCards (){
         divResume.appendChild(abstract);
         //-- Insertar "description" traida de la data a contenedor "resume" 
         divResume.appendChild(descriptionMovie);
-        
-    
+
+
         //-- mostrar director de la pelicula dentro de "divDirector" hijo de "divBack" --//
         //-- Colocarle un titulo a director
         const dir = document.createElement("h7");
@@ -123,8 +124,8 @@ function showCards (){
         divDirector.appendChild(dir);
         //-- Insertar "director" traida de la data a contenedor "resume"
         divDirector.appendChild(directorMovie);
-    
-    
+
+
         //-- mostrar productor de la pelicula dentro de "divProducer" hijo de "divBack" --//
         //-- Colocarle un titulo a productor
         const producer = document.createElement("h7");
@@ -132,8 +133,8 @@ function showCards (){
         divProducer.appendChild(producer);
         //-- Insertar "producer" traida de la data a contenedor "resume"
         divProducer.appendChild(producerMovie);
-        
-    
+
+
         //-- mostrar link personajes de la pelicula dentro de "divCharacter" hijo de "divBack"
         //-- Colocarle un titulo a personajes
         const characters = document.createElement("h7");
@@ -145,12 +146,12 @@ function showCards (){
         //-- vinculando div padre "divConatiner" con sus div hijos "divPoster" y "divBack" --//
         divContainer.appendChild(divPoster);
         divContainer.appendChild(divBack);
-        
-    
+
+
         //let titleofMovie=document.createElement("TITLE");
         //titleofMovie=allMovies[i].title;
         document.querySelector(".posters").appendChild(divContainer);
-    
+
         //-- Funcionalidad para girar la tarjeta --//
         divContainer.addEventListener("click", () => {
             divContainer.classList.toggle("active")
@@ -161,23 +162,24 @@ function showCards (){
 //-- Mostrar tarjetas en pantalla --//
 showCards(allMovies);
 
+
 //-- Evento al click en el boton ordenar por orden alfabetico "A-Z"
-document.querySelector(".submenu1").addEventListener("click", () => {
-    document.querySelector(".posters").innerHTML ="";
+document.querySelector(".submenu1").addEventListener("click", () => {    
+    document.querySelector(".posters").innerHTML = "";
     showCards(sortAZ(allMovies));
     console.log(sortAZ(allMovies));
 });
 
 //-- Evento al click en el boton ordenar por orden año de estreno "año estreno"
 document.querySelector(".submenu2").addEventListener("click", () => {
-    document.querySelector(".posters").innerHTML ="";
+    document.querySelector(".posters").innerHTML = "";
     showCards(releaseDate(allMovies));
     console.log(releaseDate(allMovies));
 });
 
 //-- Evento al click en el boton ordenar por puntaje rotten tomatoes "Calificación"
 document.querySelector(".submenu3").addEventListener("click", () => {
-    document.querySelector(".posters").innerHTML ="";
+    document.querySelector(".posters").innerHTML = "";
     showCards(score(allMovies));
     console.log(score(allMovies));
 });
@@ -287,6 +289,8 @@ document.querySelector(".navLink").addEventListener("click", () => {
     document.querySelector(".navSortBy").style.display ="block";
     document.querySelector("aside").style.display ="block";
     document.querySelector(".containerFilmFilter").style.display = "none"; 
+    document.querySelector(".posters").innerHTML ="";
+    showCards();
     
 });
 
@@ -310,18 +314,31 @@ function buttons(){
 }
 
 
+//--Evento seleccion de personajes--//
+
 //-- Evento al click en el boton filtrar por Pelicula
 document.querySelector(".buttonFilter").addEventListener("click", () => {
-    buttons(allMovies);
-});
 
-//-- Evento al click en el boton filtrar por Pelicula en el boton de la pelicula
-document.querySelector(".containerFilmFilter").addEventListener("click", (e) => {
-    let titleFilter = e.target.textContent;
-    document.querySelector(".posters").innerHTML ="";
+   buttons(allMovies);
+    
+    
+    /* document.querySelector(".posters").appendChild(divContainer)
+    console.log(showCards(showCharacters(allMovies)));
+ */
 
-    showCharacters(movieFilter(titleFilter));
-    console.log(showCharacters(movieFilter(titleFilter)));
+    //-- Evento al click en el boton filtrar por Pelicula en el boton de la pelicula
+    document.querySelector(".containerFilmFilter").addEventListener("click", (e) => {
+        let titleFilter = e.target.textContent;
+
+
+        document.querySelector(".posters").innerHTML = "";
+        showCharacters(movieFilter(allMovies, titleFilter));
+        let divContainer = document.createElement("div");
+        divContainer.setAttribute("class", "cardContainer")
+        document.querySelector(".posters").appendChild(divContainer);
+        //poster.appendChild(showCharacters(movieFilter(titleFilter)));//
+    //posters.appendChild(titleFilter);//
+    //console.log(showCharacters(movieFilter(titleFilter)));//
 
     
     /* console.log(movieFilter); */
@@ -330,4 +347,16 @@ document.querySelector(".containerFilmFilter").addEventListener("click", (e) => 
 
         
     
+
+
+
+    /* for (let i = 0; allMovies.length; i++) {
+        let nameOfMovie = allMovies[i].title;
+        if (nameOfMovie == movieFilter(titleFilter)) {
+
+        } */
+
+
+
+});
 });
