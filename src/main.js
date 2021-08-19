@@ -167,21 +167,18 @@ showCards(allMovies);
 document.querySelector(".submenu1").addEventListener("click", () => {
     document.querySelector(".posters").innerHTML = "";
     showCards(sortAZ(allMovies));
-    console.log(sortAZ(allMovies));
 });
 
 //-- Evento al click en el boton ordenar por orden año de estreno "año estreno"
 document.querySelector(".submenu2").addEventListener("click", () => {
     document.querySelector(".posters").innerHTML = "";
     showCards(releaseDate(allMovies));
-    console.log(releaseDate(allMovies));
 });
 
 //-- Evento al click en el boton ordenar por puntaje rotten tomatoes "Calificación"
 document.querySelector(".submenu3").addEventListener("click", () => {
     document.querySelector(".posters").innerHTML = "";
     showCards(score(allMovies));
-    console.log(score(allMovies));
 });
 
 
@@ -282,15 +279,24 @@ document.querySelector(".navLink1").addEventListener("click", () => {
     document.querySelector("aside").style.display = "none";
     document.querySelector(".posters").innerHTML = "";
     document.querySelector(".containerFilmFilter").style.display = "inline-flex";
-    //-- Mostrar tarjetas de personajes en pantalla --//
-    for (let i = 0; 0 < allMovies.length; i++) {
-        let allCharacters = allMovies[i].people;
-        showCharacters(allCharacters);
-    }
 
+    let allCharacters = [];
+    //-- Mostrar tarjetas de personajes en pantalla --//
+    for (let i = 0; i < allMovies.length; i++) {
+        for (let j = 0; j < allMovies[i].people.length; j++){
+            allCharacters.push(allMovies[i].people[j]);
+        }
+        
+    };
+    showCharacters(allCharacters);
+   
 
     //Mostrar Estadisticas de cantidad de personajes femeninos, masculinos y otros//
-    document.querySelector(".stadistics").innerHTML = "There are " + (genderCharacters.total) + " characters in Studio Ghibli's movies. Around " + Math.round(objectValue.fem) + "% of them are female characters."
+    let totalCharacters = genderCharacters(allCharacters);
+
+    document.querySelector(".stadistics").innerHTML = "There are " + (totalCharacters.allTotal) + " characters in Studio Ghibli's movies. Around " + (totalCharacters.girlsPercent) + "% of them are female characters, " + (totalCharacters.boysPercent) + "% of them are male characters and " + (totalCharacters.othersP) + "% of them are others undefined gender characters."
+
+    console.log(genderCharacters(allCharacters));
 
     /* "There are "+(objectValue.total) + " characters in Studio Ghibli's movies. Around "  + Math.round(objectValue.fem) + "% of them are female characters." */
     

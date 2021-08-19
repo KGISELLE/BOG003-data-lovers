@@ -27,12 +27,44 @@ export const movieFilter = (dataMovie, title) => {
   return film[0].people;
 };
 
-//-- Función para realizar el cálculo de porcentajes de los géneros de los personajes.
-export const genderCharacters = (female, male, unknown) => {
-  let total = female + male +unknown;
-  let girls = (female*100)/total;
-  let boys = (male*100)/total;
-  let others = (unknown*100)/total;
-  let values = {female: girls, male: boys, unknown: others}
-  return values;
+
+//-- Funcion para mostrar estadisticas de canridad de personajes female, male y others)
+export const genderCharacters = (allCharacters) => {
+
+  let allPeopleMale = allCharacters.reduce((contador, allCharacters) => {if (allCharacters.gender === "Male"){
+    return contador + 1;
+  } else {
+    return contador;
+  }}, 0);
+
+  let allPeopleFemale = allCharacters.reduce((contador, allCharacters) => {if (allCharacters.gender === "Female"){
+    return contador + 1;
+  } else {
+    return contador;
+  }}, 0);
+  
+  let allPeopleOthers = allCharacters.reduce((contador, allCharacters) => {if (allCharacters.gender === "Unknown (Possible Male)"){
+    return contador + 1;
+  } else {
+    return contador;
+  }}, 0);
+
+  let others = allCharacters.length - (allPeopleFemale + allPeopleMale + allPeopleOthers);
+
+  let total = allPeopleMale + allPeopleFemale + allPeopleOthers + others;
+  let girls = ((allPeopleFemale*100)/total).toFixed();
+  let boys = ((allPeopleMale*100)/total).toFixed();
+  let othersPercent = (((allPeopleOthers+others)*100)/total).toFixed();
+
+  /* console.table(total, girls, boys, othersPercent); */
+
+  let object = {allTotal: total, boysPercent: boys, girlsPercent: girls, othersP: othersPercent}
+  
+
+  return object;
+  
 };
+
+
+
+

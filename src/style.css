@@ -451,6 +451,11 @@ h7{
 
 .stadistics{
     color:whitesmoke;
-    padding: 10px;
+    padding: 10px 10px 5px 15px;
     text-align: center;
+    width: 200px;
+    text-align: justify;
+    align-items: center;
+    font-size: 12px;
+
 }
