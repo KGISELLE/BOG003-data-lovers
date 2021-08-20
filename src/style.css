@@ -74,7 +74,7 @@ header h1{
 
 .navLink:hover, .navLink1:hover{
     background-color:plum;
-    color: black;
+    color: #333333;
     text-transform:uppercase;
     transition: 0.5s;
 }
@@ -281,7 +281,7 @@ IMG{
     font-size: 11px;
     padding: 8px;
     margin: 5px;
-    color:black;
+    color: black;
     border-radius: 5px;
     border-style:double;
     border-color: darkmagenta;
@@ -293,7 +293,7 @@ IMG{
 h6{
     text-align: justify;
     font-size: 12px;
-    color:black;
+    color:#333333;
 }
 
 /*estilos h7 titulos de la data*/
@@ -311,7 +311,7 @@ h7{
     font-size: 15px;
     padding: 3px;
     margin: 5px;
-    color:black;
+    color: #333333;
     border-radius: 5px;
     border-style:dotted;
     border-color: darkmagenta;
@@ -327,7 +327,7 @@ h7{
     font-size: 15px;
     padding: 3px;
     margin: 5px;
-    color:black;
+    color:#333333;
     border-radius: 5px;
     border-style:dotted;
     border-color: darkmagenta;
@@ -343,7 +343,7 @@ h7{
     font-size: 15px;
     padding: 3px;
     margin: 5px;
-    color:black;
+    color: #333333;
     border-radius: 5px;
     border-style:dotted;
     border-color: darkmagenta;
@@ -387,7 +387,6 @@ h7{
 
 .buttonFilm{
     background-color:plum;
-    color: whitesmoke;
     padding: 0px 5px;
     text-align: center;
     margin: 0px 5px 0px 10px;
@@ -419,7 +418,7 @@ h7{
     font-size: 13px;
     padding: 30px;
     margin: 10px;
-    color:black;
+    color: #333333;
     border-radius: 5px;
     border-style:double;
     border-color: darkmagenta;
@@ -438,7 +437,7 @@ h7{
     font-size: 15px;
     padding: 3px;
     margin: 5px;
-    color:black;
+    color: #333333;
     border-radius: 5px;
     border-style:dotted;
     border-color: darkmagenta;
