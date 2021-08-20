@@ -287,16 +287,16 @@ document.querySelector(".navLink1").addEventListener("click", () => {
             allCharacters.push(allMovies[i].people[j]);
         }
         
-    };
+    }
     showCharacters(allCharacters);
-   
+   //console.log(allCharacters);
 
     //Mostrar Estadisticas de cantidad de personajes femeninos, masculinos y otros//
     let totalCharacters = genderCharacters(allCharacters);
 
     document.querySelector(".stadistics").innerHTML = "There are " + (totalCharacters.allTotal) + " characters in Studio Ghibli's movies. Around " + (totalCharacters.girlsPercent) + "% of them are female characters, " + (totalCharacters.boysPercent) + "% of them are male characters and " + (totalCharacters.othersP) + "% of them are others undefined gender characters."
 
-    console.log(genderCharacters(allCharacters));
+    //console.log(genderCharacters(allCharacters));
 
     /* "There are "+(objectValue.total) + " characters in Studio Ghibli's movies. Around "  + Math.round(objectValue.fem) + "% of them are female characters." */
     

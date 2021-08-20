@@ -1,12 +1,7 @@
 // funcion realizar el filtro de la A-Z
 
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
-export const sortAZ = (dataMovie) => {
+export const sortAZ = (dataMovie) => {  
   return dataMovie.sort((a, b) => (a.title < b.title ? -1 : 1));
 };
 
@@ -23,7 +18,7 @@ export const score = (dataMovie) => {
 //-- Función para filtar la data por "Pelicula" --//
 export const movieFilter = (dataMovie, title) => {
 
-  let film = dataMovie.filter(movie => movie.title == title);
+  let film = dataMovie.filter(movie => movie.title == title);  
   return film[0].people;
 };
 
