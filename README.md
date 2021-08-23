@@ -105,6 +105,17 @@ El proceso de diseño se realizó en conjunto con las desarrolladoras y algunos 
 <br>
 
 ## 4. Test de usabilidad
+ Se desarollaron de forma guiada permitiendo obtener opiniones, consejos, sugerencias en cuanto a aspectos visuales se refiere, ademas de algunas sugerencias y gustos de las funcionalidades.<br>
+ Debido a que existe una amplia y variada gama de test de usabilidad, en este proyecto se aplico el test de uso pactado del producto con tres tipos de usuarios, aficionados, usuarios que habian oido mencionar algunas peliculas y los que no conocian nada sobre las peliculas de Studio Ghibli.
 
 ## 5. Test unitarios
+Se ejecutaron los testeos unitarios para las funciones que se encuentran en el  archivo  data.js, donde se han cubierto todos los items y funciones con un porcentaje superior al 75% como se evidencia en la siguiente imagen.
+
+<img src = "src\IMG\testunitario.PNG">
+
+
+
+
+
+
 
