@@ -2,7 +2,15 @@
 
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 export const sortAZ = (dataMovie) => {  
-  return dataMovie.sort((a, b) => (a.title < b.title ? -1 : 1));
+  //return dataMovie.sort((a, b) => (a.title < b.title ? -1 : 1));
+  return dataMovie.sort((a, b) => {
+    //return(a.title < b.title ? -1 : 1)//
+    if(a.title < b.title){
+      return -1;
+    } else {
+      return 1;
+    }
+  });
 };
 
 //-- Función para organizar la data por año de lanzamiento --//

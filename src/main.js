@@ -288,6 +288,7 @@ document.querySelector(".navLink1").addEventListener("click", () => {
         }
         
     }
+    
     showCharacters(allCharacters);
    //console.log(allCharacters);
 
