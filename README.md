@@ -115,7 +115,7 @@ Se ejecutaron los testeos unitarios para las funciones que se encuentran en el  
 
 ## 6. Deploy app
 
-[link](https://ghiblidata.netlify.app)
+[Ghibli Fandom](https://ghiblifandom.netlify.app/)
 
 
 
